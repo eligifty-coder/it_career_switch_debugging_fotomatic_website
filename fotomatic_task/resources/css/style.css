@@ -25,10 +25,15 @@ html {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
 }
+body{
+  overflow-x: hidden;
+  width:100%
+}
 
 .main-content {
   position: relative;
   top: 5.3125rem; /* To offset for fixed header. */
+  
 }
 
 .center {
@@ -109,7 +114,7 @@ header .mobile {
 
   header .mobile {
     display: block;
-    width: 100%;
+    /* width: 100%; */
   }
 
   header .content {
@@ -146,7 +151,7 @@ header .mobile {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  
+  width: 100%; 
 }
 
 #sign-up-cta {
@@ -249,7 +254,6 @@ header .mobile {
   justify-content: space-between;
   padding: 4rem 5%;
   background-color: #f3f3f3;
-  background-color: red;
 }
 
 .feature {
@@ -263,8 +267,14 @@ header .mobile {
   width: 90%;
   height: 65%;
   margin: 0 auto;
+  margin-bottom: 2.5rem;
 }
-
+.feature .image-container img{
+  width:100%;
+  height: auto;
+  display: block;
+  margin: 0;
+}
 .feature h2 {
   padding-bottom: .5rem;
   font-size: 2.25rem;
@@ -332,6 +342,18 @@ header .mobile {
 #filters-section .images-container {
   max-width: 100%;
   padding: 0 1%;
+  display: flex;
+
+  
+}
+#filters-section .image-container {
+  width: 100%;
+}
+#filters-section .image-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
 }
 
 @media only screen and (max-width: 760px) {
@@ -357,6 +379,7 @@ header .mobile {
 
   #filters-section .images-container {
     padding: 0;
+    flex-direction: column;
   }
 
   #filters-section .extra {
